@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 7363023196ab8f541b231b866c0f5b1c, type: 3}
+    totalSpriteSurfaceArea: 2188669
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b7fd20551d34df04684ac005d1b54c14, type: 3}
+  - {fileID: 21300000, guid: f43f8cc5eadc8e94b9be7962fcbfe09f, type: 3}
+  - {fileID: 21300000, guid: 441966f88f40e6f40895481c5e79f898, type: 3}
+  - {fileID: 21300000, guid: 47ae92ca76918024fae0b91799f8eb04, type: 3}
+  - {fileID: 21300000, guid: 3212428bff945a84cb1e2c2aaf887e2d, type: 3}
+  - {fileID: 9061561505821897363, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -8279523227656508392, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 3459184886018178882, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 6568847383277119070, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -6576415947020580512, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 7331791029839372842, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 6864962548980495972, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 843802989380450464, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -3741318496717188127, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 2107565193617476968, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 8708567454243387087, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -4984315708211168983, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 8319850926943654338, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 6840046034512548333, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -8947054006407886728, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 3152926528668863508, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 1948070944526117589, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 6497913094492810295, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -484585444372706987, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -2182516296219531368, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 5908347820848137489, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -4759619128906509040, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 9174476219847249087, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -5516042872912638013, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -2159417869344501872, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -1656421639205507948, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -5052601882975936502, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 1750922796666515026, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 5111180859223144907, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -3762611579900657403, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 6116271957250306101, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 1462180230547136403, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -6489031493213156305, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 7170069342923412109, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 4856398681345870146, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 5674589026114033149, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 1233465521873011723, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 1854682176019680195, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 2220842290502880705, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 1903082873814107647, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 2059750769811201857, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -1905302321396502910, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 8329857908522267823, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 7424334789792355479, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -6354537658100893899, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -3034349285288799419, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 5394475821001144276, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: 21300000, guid: 42005afb256654d4db0ccb3704572942, type: 3}
+  - {fileID: 21300000, guid: 6f91a8ec454b8f14aab88decfddf76d1, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - BallYellow
+  - Block
+  - GL0
+  - GR0
+  - BlueSky
+  - Orange theme spritesheet 1_20
+  - Orange theme spritesheet 1_21
+  - Orange theme spritesheet 1_42
+  - Orange theme spritesheet 1_23
+  - Orange theme spritesheet 1_33
+  - Orange theme spritesheet 1_43
+  - Orange theme spritesheet 1_24
+  - Orange theme spritesheet 1_32
+  - Orange theme spritesheet 1_40
+  - Orange theme spritesheet 1_25
+  - Orange theme spritesheet 1_31
+  - Orange theme spritesheet 1_41
+  - Orange theme spritesheet 1_26
+  - Orange theme spritesheet 1_30
+  - Orange theme spritesheet 1_46
+  - Orange theme spritesheet 1_27
+  - Orange theme spritesheet 1_37
+  - Orange theme spritesheet 1_28
+  - Orange theme spritesheet 1_36
+  - Orange theme spritesheet 1_44
+  - Orange theme spritesheet 1_29
+  - Orange theme spritesheet 1_35
+  - Orange theme spritesheet 1_45
+  - Orange theme spritesheet 1_34
+  - Orange theme spritesheet 1_39
+  - Orange theme spritesheet 1_38
+  - Orange theme spritesheet 1_19
+  - Orange theme spritesheet 1_18
+  - Orange theme spritesheet 1_11
+  - Orange theme spritesheet 1_13
+  - Orange theme spritesheet 1_12
+  - Orange theme spritesheet 1_17
+  - Orange theme spritesheet 1_16
+  - Orange theme spritesheet 1_2
+  - Orange theme spritesheet 1_3
+  - Orange theme spritesheet 1_0
+  - Orange theme spritesheet 1_1
+  - Orange theme spritesheet 1_6
+  - Orange theme spritesheet 1_7
+  - Orange theme spritesheet 1_4
+  - Orange theme spritesheet 1_5
+  - Bullet1
+  - Bullet0
+  - Bullet3
+  - Bullet2
+  - Bullet5
+  - Bullet4
+  - BallRed
+  - BallBlue
+  m_Tag: SpriteAtlas
+  m_IsVariant: 0
