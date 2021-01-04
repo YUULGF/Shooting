@@ -25,6 +25,7 @@ namespace GameCanvas
         public static readonly GcImage Bullet5 = new GcImage("Bullet5", 106, 232);
         public static readonly GcImage GL0 = new GcImage("GL0", 32, 32);
         public static readonly GcImage GR0 = new GcImage("GR0", 32, 32);
+        public static readonly GcImage Life = new GcImage("Life", 224, 223);
         public static readonly GcImage Orangethemespritesheet1_0 = new GcImage("Orange theme spritesheet 1_0", 80, 51);
         public static readonly GcImage Orangethemespritesheet1_1 = new GcImage("Orange theme spritesheet 1_1", 80, 51);
         public static readonly GcImage Orangethemespritesheet1_11 = new GcImage("Orange theme spritesheet 1_11", 198, 210);
@@ -60,7 +61,6 @@ namespace GameCanvas
         public static readonly GcImage Orangethemespritesheet1_41 = new GcImage("Orange theme spritesheet 1_41", 166, 349);
         public static readonly GcImage Orangethemespritesheet1_42 = new GcImage("Orange theme spritesheet 1_42", 411, 309);
         public static readonly GcImage Orangethemespritesheet1_43 = new GcImage("Orange theme spritesheet 1_43", 433, 325);
-        public static readonly GcImage Orangethemespritesheet1_44 = new GcImage("Orange theme spritesheet 1_44", 224, 223);
         public static readonly GcImage Orangethemespritesheet1_45 = new GcImage("Orange theme spritesheet 1_45", 308, 308);
         public static readonly GcImage Orangethemespritesheet1_46 = new GcImage("Orange theme spritesheet 1_46", 667, 160);
         public static readonly GcImage Orangethemespritesheet1_5 = new GcImage("Orange theme spritesheet 1_5", 185, 306);

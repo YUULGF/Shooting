@@ -61,7 +61,6 @@ SpriteAtlas:
   - {fileID: 1948070944526117589, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 6497913094492810295, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: -484585444372706987, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
-  - {fileID: -2182516296219531368, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 5908347820848137489, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: -4759619128906509040, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 9174476219847249087, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
@@ -83,6 +82,7 @@ SpriteAtlas:
   - {fileID: 2220842290502880705, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 1903082873814107647, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 2059750769811201857, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
+  - {fileID: -2182516296219531368, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: -1905302321396502910, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 8329857908522267823, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
   - {fileID: 7424334789792355479, guid: 309ac3eb4cc441349b63128366ca98b6, type: 3}
@@ -116,7 +116,6 @@ SpriteAtlas:
   - Orange theme spritesheet 1_37
   - Orange theme spritesheet 1_28
   - Orange theme spritesheet 1_36
-  - Orange theme spritesheet 1_44
   - Orange theme spritesheet 1_29
   - Orange theme spritesheet 1_35
   - Orange theme spritesheet 1_45
@@ -138,6 +137,7 @@ SpriteAtlas:
   - Orange theme spritesheet 1_7
   - Orange theme spritesheet 1_4
   - Orange theme spritesheet 1_5
+  - Life
   - Bullet1
   - Bullet0
   - Bullet3

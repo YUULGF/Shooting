@@ -12,6 +12,7 @@ public sealed class Game : GameBase
     float player_x;
     float player_y;
     float player_speed;
+    float player_life;
     const int ENEMY_NUM = 10;
     int[] enemy_x = new int [ENEMY_NUM];
     int[] enemy_y = new int [ENEMY_NUM];
@@ -57,15 +58,31 @@ public sealed class Game : GameBase
     {
         if(gameState == 0)
         {
+            /*
             // タイトル画面の処理
             if(gc.GetPointerFrameCount(0) == 1)
             {
                 gameState = 1;
             }
+            */
+
+            // タイトル画面の処理
+            if (gc.CheckHitRect(gc.GetPointerX(0), gc.GetPointerY(0), 1, 1, 260, 600, 160, 48))
+            {
+                player_life = 1;
+                gameState = 1;
+            }
+
+            if (gc.CheckHitRect(gc.GetPointerX(0), gc.GetPointerY(0), 1, 1, 260, 720, 160, 48))
+            {
+                player_life = 2;
+                gameState = 2;
+            }
         }
         else if(gameState == 1)
         {
             // ゲーム中の処理
+            // 難易度　かんたん
             for (int i = 0; i < ENEMY_NUM; i++)
             {
                 enemy_y[i] = enemy_y[i] + enemy_speed[i];
@@ -100,6 +117,24 @@ public sealed class Game : GameBase
             {
                 player_y += gc.AccelerationLastY * player_speed;
                 bullet_count--;
+            }
+
+            // 自機の移動範囲設定
+            if(player_x > 720 - player_w)
+            {
+                player_x = 720 - player_w;
+            }
+            if(player_x < 0)
+            {
+                player_x = 0;
+            }
+            if(player_y < 0)
+            {
+                player_y = 0;
+            }
+            if(player_y > 1280 - player_w)
+            {
+                player_y = 1280 - player_w;
             }
 
             //弾の発射処理
@@ -145,13 +180,126 @@ public sealed class Game : GameBase
                 {
                     if(enemy_alive_flag[i])
                     {
-                        gameState = 2;
+                        gameState = 3;
                     }
                 }
             }
 
         }
         else if(gameState == 2)
+        {
+            // ゲーム中の処理
+            // 難易度　むずかしい
+            for (int i = 0; i < ENEMY_NUM; i++)
+            {
+                enemy_y[i] = enemy_y[i] + (enemy_speed[i] * 2);
+                if (enemy_y[i] > 1280)
+                {
+                    resetEnemy(i);
+                }
+            }
+
+            //弾の移動処理
+            for (int k = 0; k < BULLET_NUM; k++)
+            {
+                bullet_y[k] -= (bullet_speed * 2);
+            }
+
+            //自機の移動処理
+            if (gc.AccelerationLastX >= 0)
+            {
+                player_x += gc.AccelerationLastX * (player_speed * 2);
+                player_img = GcImage.GR0;
+            }
+            else
+            {
+                player_x += gc.AccelerationLastX * (player_speed * 2);
+                player_img = GcImage.GL0;
+            }
+            if (gc.AccelerationLastY > 0)
+            {
+                player_y += gc.AccelerationLastY * (player_speed * 2);
+            }
+            else
+            {
+                player_y += gc.AccelerationLastY * (player_speed * 2);
+                bullet_count--;
+            }
+
+            // 自機の移動範囲設定
+            if (player_x > 720 - player_w)
+            {
+                player_x = 720 - player_w;
+            }
+            if (player_x < 0)
+            {
+                player_x = 0;
+            }
+            if(player_y < 0)
+            {
+                player_y = 0;
+            }
+            if (player_y > 1280 - player_w)
+            {
+                player_y = 1280 - player_w;
+            }
+
+            //弾の発射処理
+            if (gc.AccelerationLastY < -0.1)
+            {
+                if (bullet_count <= 0)
+                {
+                    resetBullet(next_bullet);
+                    gc.PlaySound(GcSound.Click2);
+                    next_bullet++;
+                    bullet_count = 30;
+
+                    if (next_bullet > 6)
+                    {
+                        next_bullet = 0;
+                    }
+                }
+            }
+
+            //敵と弾の当たり判定
+            for (int i = 0; i < ENEMY_NUM; i++)
+            {
+                for (int j = 0; j < BULLET_NUM; j++)
+                {
+                    if (gc.CheckHitRect(enemy_x[i], enemy_y[i], enemy_w, enemy_h, bullet_x[j], bullet_y[j], 12, 24))
+                    {
+                        if (bullet_alive_flag[j])
+                        {
+                            enemy_alive_flag[i] = false;
+                            bullet_alive_flag[j] = false;
+                            score += enemy_col[i];
+                            resetEnemy(i);
+                        }
+                    }
+                }
+
+            }
+
+            //敵と自機の当たり判定
+            for (int i = 0; i < ENEMY_NUM; i++)
+            {
+                if (gc.CheckHitRect(enemy_x[i], enemy_y[i], enemy_w, enemy_h, player_x, player_y, player_w, player_h))
+                {
+                    if (enemy_alive_flag[i])
+                    {
+                        enemy_alive_flag[i] = false;
+                        player_life--;
+                        if(player_life <= 0)
+                        {
+                            gameState = 3;
+                        }
+                    }
+                }
+            }
+
+
+        }
+        else if(gameState == 3)
         {
             //結果画面の処理
             if(gc.GetPointerFrameCount(0) > 120.0f)
@@ -177,6 +325,8 @@ public sealed class Game : GameBase
             gc.SetColor(0, 0, 0);
             gc.SetFontSize(48);
             gc.DrawString("Shooting!!", 240, 240);
+            gc.DrawString("かんたん", 260, 600);
+            gc.DrawString("むずかしい", 250, 720);
             gc.DrawString("タップしてゲームスタート！", 60, 1000);
 
             gc.SetFontSize(36);
@@ -209,17 +359,60 @@ public sealed class Game : GameBase
                 }
             }
 
+            //ライフの描画
+            gc.DrawImage(GcImage.Life, 680, 1240);
+
             // 黒の文字を描画します
             gc.SetColor(0, 0, 0);
             gc.SetFontSize(36);
+            gc.DrawString("難易度：かんたん", 0, 20);
             //gc.DrawString("AcceX:" + gc.AccelerationLastX, 0, 0);
             //gc.DrawString("AcceY:" + gc.AccelerationLastY, 0, 0);
-            gc.DrawString("傾き:" + -gc.AccelerationLastY, 0, 20);
+            gc.DrawString("傾き:" + -gc.AccelerationLastY, 0, 60);
             //gc.DrawString("AcceZ:" + gc.AccelerationLastZ, 0, 80);
-            gc.DrawString("SCORE:" + score, 0, 60);
+            gc.DrawString("SCORE:" + score, 0, 100);
         }
 
         if(gameState == 2)
+        {
+            // ゲーム中の描画
+            //自機の描画
+            gc.DrawImage(player_img, player_x, player_y);
+
+            //敵の描画
+            for (int i = 0; i < ENEMY_NUM; i++)
+            {
+                if (enemy_alive_flag[i])
+                {
+                    gc.DrawImage(enemy_img[i], enemy_x[i], enemy_y[i]);
+                }
+            }
+
+            //弾の描画
+            for (int j = 0; j < BULLET_NUM; j++)
+            {
+                if (bullet_alive_flag[j])
+                {
+                    gc.DrawImage(bullet_img[j], bullet_x[j], bullet_y[j]);
+                }
+            }
+
+            //ライフの描画
+            for (int k = 0; k < player_life; k++)
+            {
+                gc.DrawImage(GcImage.Life, 680 - (k * 60), 1240);
+            }
+
+
+            gc.SetColor(0, 0, 0);
+            gc.SetFontSize(36);
+            gc.DrawString("難易度：難しい", 0, 20);
+            gc.DrawString("傾き:" + -gc.AccelerationLastY, 0, 60);
+            gc.DrawString("SCORE:" + score, 0, 100);
+
+        }
+
+        if (gameState == 3)
         {
             //ゲームオーバー画面の描画
             gc.SetFontSize(36);
@@ -283,6 +476,4 @@ public sealed class Game : GameBase
             bullet_alive_flag[i] = true;
         }
     }
-
-
 }

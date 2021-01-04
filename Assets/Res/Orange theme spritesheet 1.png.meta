@@ -319,7 +319,7 @@ TextureImporter:
     second: Orange theme spritesheet 1_43
   - first:
       213: -2182516296219531368
-    second: Orange theme spritesheet 1_44
+    second: Life
   - first:
       213: 9174476219847249087
     second: Orange theme spritesheet 1_45
@@ -1373,7 +1373,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Orange theme spritesheet 1_44
+      name: Life
       rect:
         serializedVersion: 2
         x: 2856
